@@ -11,7 +11,6 @@ import {
   POS,
   SATELLITES,
 } from "@/lib/nodes";
-import type { ScrollBeatState } from "@/lib/useScrollBeat";
 import { CameraRig } from "./CameraRig";
 import { Connections } from "./Connections";
 import { LetterNode } from "./LetterNode";
@@ -21,13 +20,7 @@ import type { NodeHandle, NodeRegistry } from "./nodeRegistry";
 
 const LETTER_IDS = ["O1", "D", "I", "G", "O2"];
 
-export function Experience({
-  scrollRef,
-  reduced,
-}: {
-  scrollRef: React.RefObject<ScrollBeatState>;
-  reduced: boolean;
-}) {
+export function Experience({ reduced }: { reduced: boolean }) {
   const { scene, gl, camera } = useThree();
   useEffect(() => {
     scene.background = new THREE.Color(0x0f1621);
@@ -85,7 +78,7 @@ export function Experience({
 
       <Connections />
 
-      <CameraRig scrollRef={scrollRef} nodes={registry} reduced={reduced} />
+      <CameraRig nodes={registry} reduced={reduced} />
     </>
   );
 }

@@ -3,11 +3,9 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useReducedMotion } from "@/lib/useReducedMotion";
-import { useScrollBeatRef } from "@/lib/useScrollBeat";
 import { Experience } from "./Experience";
 
 export function Scene() {
-  const scrollRef = useScrollBeatRef();
   const reduced = useReducedMotion();
 
   return (
@@ -18,7 +16,7 @@ export function Scene() {
       camera={{ position: [6, 2, 34], fov: 52, near: 0.1, far: 800 }}
     >
       <Suspense fallback={null}>
-        <Experience scrollRef={scrollRef} reduced={reduced} />
+        <Experience reduced={reduced} />
       </Suspense>
     </Canvas>
   );

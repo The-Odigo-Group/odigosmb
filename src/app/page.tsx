@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { CtaButtons } from "@/components/CtaButtons";
 import { HudProgress } from "@/components/HudProgress";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Scene } from "@/components/scene/Scene";
 
 export default function Home() {
   return (
     <>
       <Scene />
+      <ScrollReveal />
       <div className="grain" />
       <div className="vignette" />
 
