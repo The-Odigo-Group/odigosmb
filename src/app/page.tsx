@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CtaButtons } from "@/components/CtaButtons";
 import { HudProgress } from "@/components/HudProgress";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -18,6 +19,13 @@ export default function Home() {
         </div>
         <HudProgress />
       </div>
+
+      <nav className="hud-nav" aria-label="Primary">
+        <Link href="/how-it-works">How It Works</Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link href="/why-odigo-smb">Why Odigo SMB</Link>
+        <Link href="/contact">Contact</Link>
+      </nav>
 
       <main>
         <section className="beat beat-hero" id="beat-0">
