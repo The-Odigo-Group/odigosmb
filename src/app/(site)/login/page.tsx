@@ -10,13 +10,12 @@ export default function LoginPage() {
   return (
     <main>
       <section className="page-hero">
-        <h1>Sign in to your client portal</h1>
-        <p className="lede">
-          The client portal is a separate system from this marketing site and isn&apos;t wired up
-          in this prototype. In production, this page routes straight to portal authentication —
-          no site-managed login.
-        </p>
+        <h1>Client Login</h1>
+        <p className="lede">If you already have an account with us, log in to the portal.</p>
         <div className="cta-row">
+          <Link className="btn" href="https://portal.theodigogroup.com">
+            Log in to the portal
+          </Link>
           <Link className="btn ghost" href="/contact">
             Talk to us instead
           </Link>

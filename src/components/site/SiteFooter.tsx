@@ -67,10 +67,14 @@ export function SiteFooter() {
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Odigo SMB. Prototype build — not a public production site.</span>
+        <span>© {new Date().getFullYear()} Odigo SMB. All rights reserved.</span>
         <span style={{ display: "flex", gap: 16 }}>
-          <Link href="/terms">Terms</Link>
-          <Link href="/privacy">Privacy</Link>
+          <a href="https://www.theodigogroup.com/privacy" target="_blank" rel="noopener noreferrer">
+            Privacy
+          </a>
+          <a href="https://www.theodigogroup.com/terms" target="_blank" rel="noopener noreferrer">
+            Terms
+          </a>
         </span>
       </div>
     </footer>
