@@ -1,17 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
 export function CtaButtons() {
   return (
     <div className="cta-row">
-      <button
-        className="btn"
-        type="button"
-        onClick={() =>
-          alert("This is a design showcase — connect this button to your intake flow when ready.")
-        }
-      >
+      <Link className="btn" href="/contact">
         Talk to an fCMO
-      </button>
+      </Link>
       <button
         className="btn ghost"
         type="button"
