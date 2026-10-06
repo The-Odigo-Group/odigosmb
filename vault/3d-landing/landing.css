@@ -1,0 +1,258 @@
+/* Styles for the vaulted 3D scroll landing page (see README.md). Shares the
+   design tokens (:root) and .btn/.eyebrow/.logo-mark/.cta-row from globals.css. */
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(15, 22, 33, 0.6) 100%);
+}
+
+.hud {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  padding: clamp(18px, 3vw, 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.readout {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.readout .bar {
+  width: 26px;
+  height: 130px;
+  border-radius: 999px;
+  background: var(--tint-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+.readout .bar i {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--olive), var(--teal-bright));
+  box-shadow: 0 0 12px 1px rgba(69, 182, 171, 0.5);
+  height: 0%;
+  transition: height 0.12s linear;
+}
+.readout .count {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background: var(--tint-strong);
+  border: 1px solid var(--glass-border);
+  padding: 5px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+.readout .count b {
+  color: var(--paper);
+  font-weight: 700;
+}
+
+.beat {
+  min-height: 130vh;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(20px, 6vw, 80px);
+  position: relative;
+}
+.beat-hero {
+  min-height: 112vh;
+}
+.beat-problem {
+  min-height: 120vh;
+}
+.beat-cta {
+  min-height: 150vh;
+  align-items: flex-end;
+  padding-bottom: 12vh;
+}
+
+.panel {
+  position: sticky;
+  top: 20vh;
+  max-width: 460px;
+  background: linear-gradient(165deg, var(--panel-fill-1), var(--panel-fill-2));
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: clamp(26px, 3.2vw, 38px);
+  backdrop-filter: blur(26px) saturate(115%);
+  box-shadow:
+    0 30px 70px -32px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.panel-left {
+  margin-right: auto;
+}
+.panel-right {
+  margin-left: auto;
+}
+.panel-center {
+  margin: 0 auto;
+  max-width: 640px;
+  text-align: center;
+}
+.panel-cta {
+  max-width: 600px;
+}
+.panel-center .eyebrow {
+  justify-content: center;
+}
+.panel-center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cue {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-top: 22px;
+  font-weight: 500;
+}
+
+.split {
+  display: flex;
+  gap: 16px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 0;
+}
+.prog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: var(--tint);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+.prog.live {
+  border-color: rgba(126, 168, 82, 0.4);
+  background: rgba(126, 168, 82, 0.08);
+}
+.prog.dev {
+  opacity: 0.55;
+}
+.prog .name {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+}
+.prog .meta {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  color: var(--muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.prog.live .meta b {
+  color: var(--olive);
+  font-weight: 700;
+}
+.tag {
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+.tag.live {
+  background: var(--olive);
+  color: #0d1a08;
+}
+.tag.dev {
+  background: rgba(255, 255, 255, 0.12);
+  color: #c9cfd6;
+}
+
+/* Minimal way back into the rest of the site from the 3D landing page's HUD,
+   without touching its existing logo/progress-bar layout. */
+.hud-nav {
+  position: fixed;
+  top: clamp(18px, 3vw, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--tint-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  pointer-events: auto;
+}
+.hud-nav a {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.hud-nav a:hover {
+  color: var(--paper);
+  background: var(--tint);
+}
+@media (max-width: 760px) {
+  .panel {
+    max-width: none;
+    top: 14vh;
+    border-radius: 22px;
+  }
+  .beat {
+    padding: 0 18px;
+  }
+  .readout .bar {
+    height: 80px;
+  }
+}
+@media (max-width: 700px) {
+  .hud-nav {
+    display: none;
+  }
+}

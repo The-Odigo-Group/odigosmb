@@ -1,76 +1,34 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ProgramPage } from "@/components/site/ProgramPage";
 
 export const metadata: Metadata = {
-  title: "Get Found — Local Search Program for Service Businesses | $2,550/mo",
+  title: "Get Found — Local Search Program | Odigo SMB",
   description:
-    "Own your local map results. Published scope, honest 6–12 month timeline, $2,550/month with a six-month minimum. Requires Foundation.",
+    "Your Google Business Profile, listings and reviews managed every month, so the people searching nearby find you. $2,550 a month with a six-month minimum.",
 };
 
 export default function GetFoundPage() {
   return (
-    <main>
-      <section className="page-hero">
-        <h1>When customers search, be the business they find.</h1>
-        <p className="lede">
-          Get Found is our local-search program: your Google Business Profile, listings, reviews,
-          and site working together to win the map pack — run by specialists, directed by your
-          fCMO. <strong>$2,550/month, six-month minimum. Requires Foundation.</strong>
-        </p>
-        <div className="cta-row">
-          <Link className="btn" href="/pricing">
-            Add Get Found
-          </Link>
-          <Link className="btn ghost" href="/contact">
-            Ask your fit question first
-          </Link>
-        </div>
-      </section>
-
-      <section className="page-section section-narrow">
-        <p className="eyebrow">Published scope</p>
-        <h2>What&apos;s included</h2>
-        <ul className="stack">
-          <li>One business location and Google Business Profile</li>
-          <li>Up to 5 tracked service areas</li>
-          <li>Up to 40 directory listings synced and corrected</li>
-          <li>Up to 20 tracked keywords</li>
-          <li>On-page optimization of up to 8 pages in your first 90 days, then ongoing maintenance</li>
-          <li>4 GBP posts a month</li>
-          <li>2 content or service-area pages a month — written with ContentGen, edited by humans, one revision round each</li>
-          <li>A review system: one automated review-ask flow plus monitoring and drafted responses for up to 20 reviews a month</li>
-          <li>A monthly performance call and readout</li>
-        </ul>
-        <p className="fine">
-          Not included: website redesigns or new sites, paid ads, PR or link-buying, video, social
-          execution, additional locations. Need more? Every add-on has a published price — an
-          additional location is +$650/month; an extra content piece is $350 — and nothing is
-          ever added without your written approval first.
-        </p>
-      </section>
-
-      <section className="page-section section-narrow glass-card callout">
-        <p className="eyebrow">The honest timeline</p>
-        <h2>6–12 months, compounding</h2>
-        <p>
-          Local search compounds. Expect early signals in 60–90 days, meaningful movement in
-          90–180, and the durable payoff over 6–12 months — that&apos;s why the minimum is six
-          months, and why anyone promising page one in 30 days is selling you something else.
-        </p>
-        <p>
-          You own your Google Business Profile, listings profiles, approved content, and data —
-          defined in your agreement, and they stay with you if we part ways.
-        </p>
-      </section>
-
-      <section className="page-section section-narrow">
-        <p className="fine">
-          Your fCMO validates fit before any program billing begins — see{" "}
-          <Link href="/how-it-works">how it works</Link>. Related:{" "}
-          <Link href="/win-customers">Win Customers</Link>,{" "}
-          <Link href="/hvac-and-trades">HVAC &amp; Trades</Link>.
-        </p>
-      </section>
-    </main>
+    <ProgramPage
+      name="Get Found"
+      lede="Your Google Business Profile, listings and reviews managed every month, so the people searching nearby find you with accurate details and a strong rating."
+      includedLead="Your fCMO sets the local search priorities. Our team handles the work and reports the results to you each month."
+      included={[
+        "Google Business Profile optimization and upkeep",
+        "Business listings kept accurate across directories, data aggregators and voice assistants, with new citations built over time",
+        "Review requests and responses, with every response to a 1 to 3 star review approved by a person before it posts",
+        "Your ranking tracked on Google Maps and in search results for the keywords that matter to you",
+        "Your key website pages optimized for local search in the first 90 days, then kept current",
+        "Two new service-area or content pages a month",
+        "Four Google Business Profile posts a month",
+        "Local search priorities set and reviewed by your fCMO",
+      ]}
+      facts={[
+        { num: "$2,550", unit: "/mo", label: "With Foundation: $3,549/mo" },
+        { num: "6 months", label: "Minimum, then six-month terms" },
+        { num: "+$650", unit: "/mo", label: "Each additional location, chosen at signing" },
+      ]}
+      note="Local search builds over 6 to 12 months, which is why the minimum is six. Additional locations are chosen when you sign. If you consistently need more than your plan covers, your fCMO proposes a package extension built around it."
+    />
   );
 }

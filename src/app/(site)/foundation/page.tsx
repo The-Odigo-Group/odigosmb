@@ -2,103 +2,147 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Foundation — Assigned Fractional CMO + Marketing System | $1,899/mo",
+  title: "Foundation — Six Months With Your fCMO | Odigo SMB",
   description:
-    "An assigned fCMO, quarterly marketing-health reviews, live portal visibility, and ContentGen — $1,899/month.",
+    "Six months with your fCMO to set your strategy, build your plans and get your first campaign in market. $999 a month, plus a $999 activation fee.",
 };
+
+const MODULES = [
+  ["1", "Business goals", "Marketing goals brief: three business goals, what marketing must do for each, and how it's measured", "Revenue goals, capacity, what has worked before"],
+  ["1", "Offerings", "Offer map: each product or service, who buys it, its price tier and margin priority", "Your service list and rough margins"],
+  ["1", "Audience and personas", "Persona and segment profiles, with three messaging pillars for each persona", "Who your best customers are and where they come from"],
+  ["2", "Campaign calendar", "Six-month campaign calendar built around your busy and slow seasons", "Seasonal patterns, local events, blackout dates"],
+  ["2", "Channels and budget", "Channel and budget plan across email, social, ads and direct mail, with ad spend shown separately", "Your monthly budget and existing accounts"],
+  ["3", "Campaign content kit", "Content for your first campaign, drafted in ContentGen and approved by your fCMO", "Photos, offers, approvals"],
+  ["3", "Launch and measurement", "Launch checklist and measurement plan", "Account access and tracking confirmation"],
+  ["4", "Lead capture and follow-up", "Lead handling playbook: where calls and forms land, response times, who follows up", "How leads are handled today"],
+  ["5", "Results and testing", "Performance review, test plan and a messaging refresh from customer conversations", "Sales outcomes and customer questions"],
+  ["6", "Events and community", "Event and community plan, plus your plan for the next six months", "Event calendar, community ties, budget"],
+];
+
+const RUNS = [
+  "The worksheet arrives in your portal a week ahead",
+  "You work through it with your fCMO in a working session",
+  "ContentGen drafts the deliverable where it can",
+  "Your fCMO edits and signs it off, and it's filed in your portal",
+];
+
+const WHERE = [
+  ["Strategy, plans, calendars, playbooks, content kit approval", "Foundation"],
+  ["Google Business Profile, listings, reviews, local search", "Get Found"],
+  ["Google Search and Local Services Ads", "Win Customers"],
+  ["Organic social posting and community management", "Earn Followers"],
+  ["Email, website changes, events", "Specialty Services, quoted in writing"],
+];
 
 export default function FoundationPage() {
   return (
     <main>
       <section className="page-hero">
-        <h1>Marketing leadership for your business — designed around a 30-day readiness window.</h1>
+        <p className="kicker">Required for every program</p>
+        <h1>Foundation</h1>
         <p className="lede">
-          Foundation is the core of Odigo SMB: an assigned fractional CMO who leads your marketing
-          strategy, strategic assets you own, verified performance visibility, and ContentGen —
-          $1,899/month, 12-month commitment, $2,950 Marketing Foundation Sprint activation ($1,475
-          with annual prepay).
+          Six months with your fCMO to set your strategy, build your plans and get your first campaign in market. $999
+          a month, plus a $999 activation fee.
         </p>
-        <div className="cta-row">
-          <Link className="btn" href="/pricing">
-            See pricing
-          </Link>
-          <Link className="btn ghost" href="/how-it-works">
-            How it works
-          </Link>
+      </section>
+
+      <section className="page-section">
+        <h2>Ten modules. Each one ends in something you keep.</h2>
+        <div className="table-scroll" style={{ marginTop: 22 }}>
+          <table className="compare">
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Module</th>
+                <th>Your fCMO delivers</th>
+                <th>You bring</th>
+              </tr>
+            </thead>
+            <tbody>
+              {MODULES.map(([month, module, delivers, bring]) => (
+                <tr key={module}>
+                  <td data-label="Month">{month}</td>
+                  <td data-label="Module">
+                    <strong>{module}</strong>
+                  </td>
+                  <td data-label="Your fCMO delivers">{delivers}</td>
+                  <td data-label="You bring">{bring}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
-      <section className="page-section section-narrow">
-        <p className="eyebrow">The sprint</p>
-        <h2>Your first 30 days</h2>
-        <p>
-          A working session on your business → positioning &amp; messaging framework and audience
-          profiles you own → ContentGen configured → portal provisioned → baseline captured.
-          Targeted for verified go-live within 30 days when required access, assets, and
-          participation are provided on time. If a delay is ours, your billing start moves; if the
-          checklist stalls on your side past day 30, billing begins day 31.
-        </p>
+      <section className="page-section">
+        <div className="band split-2">
+          <h2>How each module runs.</h2>
+          <div className="stack-gap" style={{ gap: 12 }}>
+            {RUNS.map((text, i) => (
+              <div key={text} className="step-item" style={{ alignItems: "center" }}>
+                <span className="step-num">{i + 1}</span>
+                <p style={{ margin: 0, color: "var(--paper)", fontWeight: 600 }}>{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <section className="page-section section-narrow">
-        <p className="eyebrow">Every month</p>
-        <h2>What&apos;s always running</h2>
-        <ul className="stack">
-          <li>
-            fCMO strategic leadership, with a quarterly proactive marketing-health review and
-            exception-triggered involvement within the approved scope
-          </li>
-          <li>Monitoring and plain-English performance summaries</li>
-          <li>Full portal visibility into work in progress</li>
-          <li>
-            Your ContentGen access: brand-aligned drafts from your configured positioning and
-            audiences across six deliverable types — you review, approve, and publish what you
-            create; Odigo&apos;s human editing and QA apply when an active program or separately
-            authorized scope includes content production
-          </li>
-          <li>Requests and opportunity identification through your portal or your fCMO</li>
-        </ul>
-        <p className="fine">
-          With an active program, your fCMO becomes your active strategic lead: monthly program
-          cadence, performance interpretation, execution direction, and QA oversight — your
-          quarterly review continues.
-        </p>
+      <section className="page-section">
+        <div className="split-2">
+          <div>
+            <h2>Foundation plans the work. Programs run it.</h2>
+            <p className="muted">You can run your campaigns yourself with the content kit, or hand the running to a program.</p>
+          </div>
+          <div className="table-scroll">
+            <table className="compare">
+              <thead>
+                <tr>
+                  <th>Work</th>
+                  <th>Where it lives</th>
+                </tr>
+              </thead>
+              <tbody>
+                {WHERE.map(([work, where]) => (
+                  <tr key={work}>
+                    <td data-label="Work">{work}</td>
+                    <td data-label="Where it lives">
+                      <strong>{where}</strong>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
-      <section className="page-section section-narrow">
-        <p className="eyebrow">Not included — plainly</p>
-        <h2>What Foundation isn&apos;t</h2>
-        <p>
-          SEO execution, advertising management, social publishing, campaign execution, website
-          work, ongoing custom content production, unlimited consulting — execution happens
-          through Get Found, Win Customers, future approved programs, approved overages, or
-          Specialty Services, each priced and scoped in writing.
-        </p>
-      </section>
-
-      <section className="page-section section-narrow glass-card callout">
-        <p className="eyebrow">The commitment</p>
-        <h2>$1,899/month · 12-month term</h2>
-        <p>
-          Monthly billing is a payment schedule disclosed before purchase, not a month-to-month
-          cancellation right; marketing needs sufficient time to establish and evaluate —
-          that&apos;s the design, stated up front. The nonrefundable activation fee reserves and
-          funds your Marketing Foundation Sprint. Strategic assets completed through the Sprint
-          are yours, as defined in your agreement. Timely completion depends on your access,
-          assets, participation, approvals, and readiness — incomplete readiness or abandonment
-          doesn&apos;t create a refund right. Ownership applies to completed, approved client
-          assets — not Odigo&apos;s methods, templates, software, or unfinished drafts.
-        </p>
-        <p>
-          After year one: <strong>$1,899 flexible month-to-month</strong>, or a{" "}
-          <strong>discounted 12-month renewal at $1,799</strong>.
-        </p>
-        <div className="cta-row">
-          <Link className="btn" href="/pricing">
-            See full pricing
+      <section className="page-section">
+        <div className="facts">
+          <div className="stat-tile">
+            <span className="num">
+              $999<small>/mo</small>
+            </span>
+            <span className="label">Six-month first term</span>
+          </div>
+          <div className="stat-tile">
+            <span className="num">$999</span>
+            <span className="label">One-time activation for your Sprint</span>
+          </div>
+          <div className="stat-tile">
+            <span className="num">
+              $1,199<small>/mo</small>
+            </span>
+            <span className="label">On its own after month 6, or $999 with a program</span>
+          </div>
+        </div>
+        <div className="cta-row" style={{ justifyContent: "flex-start" }}>
+          <Link className="btn" href="/contact">
+            Talk to us about Foundation
           </Link>
-          <Link className="btn ghost" href="/powered-by-contentgen">
-            What ContentGen does
+          <Link className="btn ghost" href="/pricing">
+            See all pricing
           </Link>
         </div>
       </section>

@@ -11,9 +11,9 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="form-success">
-        Thanks — that creates an inquiry on our end, not a newsletter signup.
-        {optIn ? " We'll also send occasional updates since you opted in." : " We won't email you unless you asked us to."}
-        {" "}A person will follow up.
+        Thanks. Your request is in, and a person on our team will follow up to set up your 30-minute
+        conversation.
+        {optIn ? " We'll also send occasional marketing emails, since you opted in." : " We won't send you marketing emails."}
       </div>
     );
   }
@@ -65,7 +65,7 @@ export function ContactForm() {
         <input id="c-company" name="company" type="text" required />
       </div>
       <div className="form-field">
-        <label htmlFor="c-trade">Trade / industry</label>
+        <label htmlFor="c-trade">Trade or industry</label>
         <input id="c-trade" name="trade" type="text" />
       </div>
       <div className="form-field">
@@ -92,7 +92,7 @@ export function ContactForm() {
           onChange={(e) => setOptIn(e.target.checked)}
           style={{ marginTop: 3, accentColor: "var(--teal-bright)" }}
         />
-        Send me occasional marketing emails too (optional — off by default).
+        Send me occasional marketing emails too. This is optional and off by default.
       </label>
       {error && (
         <p className="fine" style={{ color: "var(--mauve)" }}>
@@ -100,7 +100,7 @@ export function ContactForm() {
         </p>
       )}
       <button type="submit" className="btn" disabled={submitting}>
-        {submitting ? "Sending…" : "Talk to us first"}
+        {submitting ? "Sending…" : "Request a conversation"}
       </button>
     </form>
   );
