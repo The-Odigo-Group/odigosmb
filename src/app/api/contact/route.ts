@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const TO_ADDRESS = "smb@theodigogroup.com";
+const TO_ADDRESS = "SMB@theodigogroup.com";
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
