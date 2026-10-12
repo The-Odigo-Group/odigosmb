@@ -1383,3 +1383,11 @@ main a.link-card:hover {
   display: flex;
   gap: 4px;
 }
+
+sup.reg {
+  font-size: 0.55em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 0.04em;
+  font-weight: 500;
+}

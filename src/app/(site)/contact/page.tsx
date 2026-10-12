@@ -23,7 +23,7 @@ export default function ContactPage() {
           <div>
             <h2>What to expect</h2>
             <p className="muted">
-              We&apos;ll ask about your goals, your busiest and slowest seasons and what you&apos;ve tried. If
+              We&apos;ll ask about your goals, your busiest and slowest seasons, and what you&apos;ve tried. If
               Foundation is a fit, we&apos;ll walk through the Sprint and when you could start. We onboard 3 to 4 new
               clients a month.
             </p>

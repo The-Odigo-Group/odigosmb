@@ -12,11 +12,11 @@ export default function EarnFollowersPage() {
     <ProgramPage
       name="Earn Followers"
       lede="Organic social on Instagram and Facebook, planned two weeks ahead and posted three times a week, with comments and messages answered for you."
-      includedLead="Your fCMO sets the content priorities from your Foundations plan. Our team produces, posts and replies."
+      includedLead="Your fCMO sets the content priorities from your Foundation plan. Our team produces, posts, and replies."
       included={[
         "Three posts a week on Instagram and Facebook, also shared to your Google Business Profile",
         "A rolling two-week content calendar you can see in your portal",
-        "Comments and messages answered within one business day on weekdays, with questions about your hours, stock or availability passed to you",
+        "Comments and messages answered within one business day on weekdays, with questions about your hours, stock, or availability passed to you",
         "Up to two customer reposts a week on top of your three posts, each with the creator's written permission and credit",
         "Monthly results, reviewed with your fCMO",
       ]}

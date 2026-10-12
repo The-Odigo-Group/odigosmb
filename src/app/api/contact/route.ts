@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { renderContactEmail } from "@/lib/contactEmail";
 
 const TO_ADDRESS = "SMB@theodigogroup.com";
 
@@ -35,25 +36,16 @@ export async function POST(request: Request) {
   const resend = new Resend(apiKey);
   const fromAddress = process.env.RESEND_FROM_EMAIL || "Odigo SMB Website <onboarding@resend.dev>";
 
+  const { subject, html, text } = renderContactEmail({ name, email, company, trade, source, notes, marketingOptIn });
+
   try {
     await resend.emails.send({
       from: fromAddress,
       to: TO_ADDRESS,
       replyTo: email,
-      subject: `New contact inquiry — ${name}${company ? ` (${company})` : ""}`,
-      text: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Company: ${company}`,
-        trade ? `Trade / industry: ${trade}` : null,
-        source ? `How they heard about us: ${source}` : null,
-        `Marketing email opt-in: ${marketingOptIn ? "Yes" : "No"}`,
-        "",
-        "What's on their mind:",
-        notes || "(nothing entered)",
-      ]
-        .filter(Boolean)
-        .join("\n"),
+      subject,
+      html,
+      text,
     });
   } catch (err) {
     console.error("Resend send failed", err);

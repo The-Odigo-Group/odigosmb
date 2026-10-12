@@ -17,7 +17,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Odigo SMB",
   description:
-    "An assigned fractional CMO plus the ContentGen content engine for owner-led businesses. Foundation is $999 a month with a six-month first term.",
+    "An assigned fractional CMO plus the ContentGen® content engine for owner-led businesses. Foundation is $999 a month with a six-month first term.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

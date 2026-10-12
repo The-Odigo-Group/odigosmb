@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContentGen } from "@/components/site/ContentGen";
 
 export const metadata: Metadata = {
   title: "How It Works — From Your First 30 Days Onward | Odigo SMB",
@@ -24,13 +25,10 @@ export default function HowItWorksPage() {
             </div>
             <p className="nc-when">Your first 30 days</p>
             <p>
-              Your fCMO runs a working session on your business, then builds your goals brief, offer map, personas
-              and messaging. We set up ContentGen on your brand, open your portal and capture your performance
-              baseline.
+              Your fCMO runs a working session on your business, then builds your goals brief, offer map, personas, and messaging. We set up <ContentGen /> on your brand, open your portal, and capture your performance baseline.
             </p>
             <p className="muted">
-              A readiness checklist tells you what we need from you, such as site access, your Google Business Profile
-              and brand assets, and by when. Go-live is targeted within 30 days when access, assets and participation
+              A readiness checklist tells you what we need from you, such as site access, your Google Business Profile, and brand assets, and by when. Go-live is targeted within 30 days when access, assets, and participation
               arrive on time. If a delay is on us, your billing start moves. If the checklist stalls on your side past
               day 30, your subscription begins on day 31.
             </p>
@@ -39,12 +37,12 @@ export default function HowItWorksPage() {
           <div className="glass-card numbered-card">
             <div className="nc-head">
               <span className="step-num">2</span>
-              <h2>The Foundations program</h2>
+              <h2>The Foundation program</h2>
             </div>
             <p className="nc-when">Months 2 to 6</p>
             <p>
               Each month brings a module: your campaign calendar, channel and budget plan, first campaign content kit,
-              launch plan, lead handling playbook, results review and community plan. Your fCMO meets with you monthly
+              launch plan, lead handling playbook, results review, and community plan. Your fCMO meets with you monthly
               and signs off every deliverable.
             </p>
             <p className="muted">
@@ -60,9 +58,7 @@ export default function HowItWorksPage() {
             </div>
             <p className="nc-when">Any time after the Sprint</p>
             <p>
-              When your fCMO sees a real opportunity, or you pick a program yourself, Get Found, Win Customers or Earn
-              Followers attaches to your Foundation. Your fCMO validates fit before a program is ever billed, and tells
-              you if it isn&apos;t the right move yet.
+              When your fCMO sees a real opportunity, or you pick a program yourself, Get Found, Win Customers, or Earn Followers attaches to your Foundation. Your fCMO validates fit before a program is ever billed and tells you if it isn&apos;t the right move yet.
             </p>
             <p className="muted">
               Local search builds over 6 to 12 months. Paid ads show signal within weeks and settle around 90 days.
@@ -78,7 +74,7 @@ export default function HowItWorksPage() {
             <p>
               With a program, Foundation stays at $999 a month underneath it, or you can choose the $1,199 level if
               you&apos;d like more consulting time with your fCMO. On its own, Foundation renews at $1,199 a month and
-              includes your ContentGen license, a monthly meeting with your fCMO and email support through your account
+              includes your <ContentGen /> license, a monthly meeting with your fCMO, and email support through your account
               manager.
             </p>
             <p className="muted">

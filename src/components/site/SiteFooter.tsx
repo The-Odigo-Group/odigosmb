@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "./nav";
+import { ContentGen } from "./ContentGen";
 
 export function SiteFooter() {
   return (
@@ -20,7 +21,7 @@ export function SiteFooter() {
       </div>
 
       <div className="footer-bottom">
-        <span>Odigo Small Business. Powered by ContentGen.</span>
+        <span>Odigo Small Business. Powered by <ContentGen />.</span>
         <span>
           <a href="https://www.theodigogroup.com/privacy" target="_blank" rel="noopener noreferrer">
             Privacy

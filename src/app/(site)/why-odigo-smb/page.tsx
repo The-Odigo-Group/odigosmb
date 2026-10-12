@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContentGen, withMark } from "@/components/site/ContentGen";
 
 export const metadata: Metadata = {
   title: "Why Odigo SMB — Three Ways to Buy Marketing Help | Odigo SMB",
   description:
-    "Marketing tools, execution providers and traditional fractional CMOs each leave something out. Odigo SMB puts an accountable fCMO, published programs, ContentGen and a client portal in one relationship.",
+    "Marketing tools, execution providers and traditional fractional CMOs each leave something out. Odigo SMB puts an accountable fCMO, published programs, ContentGen® and a client portal in one relationship.",
 };
 
 const COMPARE = [
@@ -23,7 +24,7 @@ export default function WhyOdigoSmbPage() {
     <main>
       <section className="page-hero">
         <h1>Why Odigo SMB</h1>
-        <p className="lede">Three common ways to buy marketing help, and how Odigo SMB is put together differently.</p>
+        <p className="lede">Three common ways to buy marketing help and how Odigo SMB is put together differently.</p>
       </section>
 
       <section className="page-section">
@@ -43,7 +44,7 @@ export default function WhyOdigoSmbPage() {
                   <td data-label="Approach">
                     <strong>{approach}</strong>
                   </td>
-                  <td data-label="What it gives you">{gives}</td>
+                  <td data-label="What it gives you">{withMark(gives)}</td>
                   <td data-label="What's often missing">{missing}</td>
                 </tr>
               ))}
@@ -60,15 +61,15 @@ export default function WhyOdigoSmbPage() {
             <ul className="bullets">
               <li>Your accounts and data</li>
               <li>Your approved content</li>
-              <li>The strategic assets from your Sprint and Foundations modules, as defined in your agreement</li>
+              <li>The strategic assets from your Sprint and Foundation modules, as defined in your agreement</li>
             </ul>
           </div>
           <div className="glass-card">
             <h3>Stays with Odigo</h3>
             <ul className="bullets">
-              <li>ContentGen software and the client portal</li>
-              <li>Odigo&apos;s methods, templates and playbooks</li>
-              <li>Third-party software, preexisting IP and unapproved drafts</li>
+              <li><ContentGen /> software and the client portal</li>
+              <li>Odigo&apos;s methods, templates, and playbooks</li>
+              <li>Third-party software, preexisting IP, and unapproved drafts</li>
             </ul>
           </div>
         </div>
@@ -76,7 +77,7 @@ export default function WhyOdigoSmbPage() {
 
       <section className="page-section">
         <div className="band split-2">
-          <h2>Built on The Odigo Group&apos;s enterprise marketing experience.</h2>
+          <h2>Built on The Odigo Group&apos;s enterprise marketing experience</h2>
           <div>
             <p className="big-text">
               The Odigo Group has spent years running partner-channel marketing, structured content operations and
@@ -84,7 +85,7 @@ export default function WhyOdigoSmbPage() {
               QA discipline to owner-led businesses.
             </p>
             <p className="muted">
-              Your results come from your market, your follow-through and the work. Every client gets an assigned fCMO,
+              Your results come from your market, your follow-through, and the work. Every client gets an assigned fCMO,
               accountable by name, supported by account operations and delivery QA.
             </p>
           </div>
@@ -93,7 +94,7 @@ export default function WhyOdigoSmbPage() {
 
       <section className="page-section">
         <div className="split-2">
-          <h2>A six-month start, then your choice.</h2>
+          <h2>A six-month start, then your choice</h2>
           <div>
             <p>
               Foundation&apos;s first term is six months, disclosed before you buy, because a strategy needs time to

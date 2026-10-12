@@ -11,10 +11,10 @@ export default function WinCustomersPage() {
   return (
     <ProgramPage
       name="Win Customers"
-      lede="Google Search and Local Services Ads, run against your budget for a flat monthly fee. Your media is billed to you directly and never marked up."
+      lede="Google Search and Local Services Ads run against your budget for a flat monthly fee. Your media is billed to you directly and never marked up."
       includedLead="Tracking is verified before a dollar of ad spend goes out."
       included={[
-        "Google Search campaigns built, managed and optimized",
+        "Google Search campaigns built, managed, and optimized",
         "Local Services Ads set up and managed",
         "Conversion tracking verified before launch",
         "Managed ad spend up to $5,000 a month on the base fee",
