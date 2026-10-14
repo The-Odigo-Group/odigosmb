@@ -90,12 +90,12 @@ export function ContactForm() {
           type="checkbox"
           checked={optIn}
           onChange={(e) => setOptIn(e.target.checked)}
-          style={{ marginTop: 3, accentColor: "var(--teal-bright)" }}
+          style={{ marginTop: 3, accentColor: "var(--smb-primary)" }}
         />
         Send me occasional marketing emails too. This is optional and off by default.
       </label>
       {error && (
-        <p className="fine" style={{ color: "var(--mauve)" }}>
+        <p className="fine" style={{ color: "var(--smb-accent-warm)" }}>
           {error}
         </p>
       )}

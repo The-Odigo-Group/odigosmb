@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "Odigo SMB",
   description:
     "An assigned fractional CMO plus the ContentGen® content engine for owner-led businesses. Foundation is $999 a month with a six-month first term.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#112c49",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
